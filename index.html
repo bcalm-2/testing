@@ -21,6 +21,29 @@
 <div id="loader">
     <h1>🎂 Loading Surprise...</h1>
 </div>
+
+<!-- Start overlay: tap candles, then cut cake -->
+<div id="startOverlay" style="display:none;">
+  <div class="start-modal">
+    <h2>MAKE A BIRTHDAY WISH</h2>
+    <h1 id="startTitle"> Blow the Candles </h1>
+    <p id="candlesLeft">Blow candle · 3 left</p>
+
+    <div class="candles">
+      <button class="candle" data-index="0" aria-label="Blow candle 1">🕯️</button>
+      <button class="candle" data-index="1" aria-label="Blow candle 2">🕯️</button>
+      <button class="candle" data-index="2" aria-label="Blow candle 3">🕯️</button>
+    </div>
+
+    <div id="cakeArea" style="display:none;">
+      <div class="cake-card">
+        <img class="cake-photo" src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?auto=format&fit=crop&w=900&q=80" alt="Birthday cake" />
+        <button id="cutCakeBtn" class="cutBtn">Cut the cake</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     <div class="balloon balloon1"></div>
 <div class="balloon balloon2"></div>
 <div class="balloon balloon3"></div>
@@ -32,7 +55,7 @@
 
 <section class="hero" id="hero">
 
-    <h1>Happy Birthday 🎂</h1>
+    <h1>Happy Birthday Duggu Don🎂</h1>
 
     <p class="subtitle">
         ✨ Celebrate Every Moment ✨
@@ -69,11 +92,7 @@
 
     <h2 class="memory-title">📸 Beautiful Memories</h2>
 
-    <p class="memory-subtitle">
-        Every picture holds a beautiful story ❤️
-    </p>
-
-    <img id="slider" src="image/photo1.jpeg" alt="Memory">
+    <img id="slider" src="image/photo1.jpg" alt="Memory">
     <div class="controls">
     <button onclick="prevPhoto()">⬅ Prev</button>
     <button onclick="nextPhoto()">Next ➡</button>
@@ -102,33 +121,26 @@
     <p>
         Thank you for always being there. Every memory with you is priceless.
         May your life be filled with happiness, success, and endless smiles.
-        Happy Birthday! ❤️🎂
+        Happy Birthday! ❤️🎂 Baki itne paise mein madam ji itna hi ho payega. 
+        Othay kuchupuchu Lob you bohot sara ❤️
     </p>
   </div>
 
-<section class="thanks" id="thanksSection" style="display:none;">
+<div id="miniGame" class="mini-game" style="display:none;">
+    <h2>💡 Final Mini Game</h2>
+    <p class="quiz-question">What makes me happiest?</p>
 
-    <h2>❤️ Thank You ❤️</h2>
+    <div class="quiz-options">
+      <button class="quiz-option" data-answer="correct">Your smile</button>
+      <button class="quiz-option" data-answer="wrong">Your eyes</button>
+      <button class="quiz-option" data-answer="wrong">Your ladai ladai</button>
+    </div>
 
-    <p>
-Thank you for every laugh,<br>
-every memory,<br>
-and every moment we shared.<br><br>
+    <p id="quizResult" class="quiz-result" style="display:none;">
+      Correct! You are my favorite part of every day ❤️
+    </p>
+  </div>
 
-May all your dreams come true. ❤️<br><br>
-
-Happy Birthday 🎂✨
-</p>
-    <h3>Happy Birthday 🎂</h3>
-
-<button onclick="window.scrollTo({
-top:0,
-behavior:'smooth'
-})">
-⬆ Back to Top
-</button>
-
-</section>
 
 <audio id="music" loop>
     <source src="music/birthday.mp3" type="audio/mpeg">

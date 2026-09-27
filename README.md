@@ -32,4 +32,4 @@ I'm currently learning web development and building projects to improve my skill
 
 ---
 
-Made with ❤️ by **Raju Gorai**
+Made with ❤️ by **Your KuchuPuchu**
